@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter the Data</h1>
+    <form action="register" method="post">
+        {% csrf_token %}
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter your name"><br>
+        <label>Roll_number</label>
+        <input type="text" name="roll_num" placeholder="Enter your rollnumber"><br>
+        <label>Age</label>
+        <input type="text" name="age" placeholder="Enter your age"><br>
+        <label>Mark</label>
+        <input type="text" name="mark" placeholder="Enter your mark"><br>
+        <input type="submit" value="register">
+    </form>
+
+    <h1>Search here</h1>
+    <form action="searching" method="post">
+        {% csrf_token %}
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+
+    <h1>Delete Data</h1>
+    <form action="deleting" method="post">
+        {% csrf_token %}
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+
+    <h1>Update data</h1>
+    <form action="updating" method="post">
+        {% csrf_token %}
+        <label>Roll no</label>
+        <input type="text" name="roll_no" placeholder="Enter your rollnumber"><br>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter your name"><br>
+        <label>Age</label>
+        <input type="text" name="age" placeholder="Enter your age"><br>
+        <label>Mark</label>
+        <input type="text" name="mark" placeholder="Enter your mark"><br>
+        <input type="submit" value="update">
+    </form>
+</body>
+</html>
